@@ -37,12 +37,12 @@
   \section{Introduction}
   TODO
   \section{Host Programming}
-  The program on the host is responsible for the initialization, coordination of kernels execution and data transfer to the kernels. In this case, the initial data is taken from text files. Once the files are read by the host to create the initial data buffers that are used by the kernel in charge of normalizing and writing the data into FIFO buffer channels.
+  The program on the host is responsible for the initialization, coordination of kernels execution and data transfer to the kernels. The host creates the initial data buffers that are used by the kernel in charge of normalizing and writing the data into FIFO buffer channels.
 
-  \begin{figure}[h!]
+ \begin{figure}[h!]
     \includegraphics[width=0.2\linewidth]{images/host_diagram.png}
-    \caption{Host main diagram.}
-    \label{fig:Host functions main daigram}
+    \caption{Host main diagram}
+    \label{fig:Host functions main diagram}
   \end{figure}
 
   \subsection{Get OpenCL Platform}
