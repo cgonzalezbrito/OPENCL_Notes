@@ -10,8 +10,7 @@
 \definecolor{ltgray}{rgb}{0.98,0.98,0.98}
 
 \lstset{ % General setup for the package
-    backgroundcolor=\color{ltgray},  
-    language=C++,
+    backgroundcolor=\color{ltgray},
     numberstyle=\tiny,
     frame=tb,
     tabsize=4,
@@ -42,23 +41,19 @@
  \begin{figure}[h!]
     \includegraphics[width=0.2\linewidth]{images/host_diagram.png}
     \caption{Host main diagram}
-    \label{fig:Host functions main diagram}
+    \label{Fig 1:Host functions main diagram}
   \end{figure}
 
   \subsection{Get OpenCL Platform}
-  The of Platform is related to the vendor. OpenCL defines a mechanism to identify a specific vendor’s OpenCL implementation in code, i.e. the platform on which the program run. This is important for portability property of OpenCL.
+  Platform is related to the vendor. OpenCL defines a mechanism to identify a specific vendor’s OpenCL implementation in code, i.e. the platform on which the program run. This is important for portability property of OpenCL.
 
-  \begin{lstlisting}
+  \begin{lstlisting}[title={Normal Use. Scarpino}]
     cl_int clGetPlatformIDs(cl_uint num_entries,
                             cl_platform_id *platforms,
                             cl_uint *num_platforms)
   \end{lstlisting}
-  \caption{Normal use}
-  \label{lst:Scarpino}
 
-  \
-
-  \begin{lstlisting}
+  \begin{lstlisting}[title={VPNC use}]
   // Get the OpenCL platform.
   cl_platform_id platform = findPlatform("Altera");
   if(platform == NULL) {
@@ -67,6 +62,5 @@
     return false;
     }
   \end{lstlisting}
-  \caption{VPNC use}
 
 \end{document}
